@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>slot booking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bookaslot.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		const a=[]
+		function confirmbook(){
+			let x = Math.floor((Math.random(1,9) *1000000) + 1);
+			confirm("Your Booking Successfull \n your booking id:"+x);
+			a.push(x);
+		}
+		function driverbook(){
+			let x = Math.floor((Math.random(1,9) *1000000) + 1);
+			let b = Math.floor((Math.random()*(9199999999-9100000000)+1)+9100000000);
+			confirm("Your Booking Successfull \n your driver booking id:"+x+"\n phone number:"+b);
+		}
+
+	</script>
+</head>
+<body class="form-v10" >
+	
+	<div class="page-content">
+		
+		<div class="form-v10-content">
+			<div class="section-1 box">
+			<form class="form-detail" action="submit" method="post" id="myform">
+				<div class="form-left">
+					<h2>Parking Slot Booking</h2>
+					<div class="form-row">
+						    <select name="Select area">
+						    <option class="option" value="None">Select Area</option>
+						    <option class="option" value="Hyderabad">Hyderabad</option>
+						    <option class="option" value="kukatpally">kukatpally</option>
+						    <option class="option" value="Balnagar">Balnagar</option>
+						    <option class="option" value="Moosapet">Moosapet</option>
+ 						    <option class="option" value="Ameerpet">Ameerpet</option>
+ 						    <option class="option" value="SR Nagar">SR Nagar</option>
+ 						    <option class="option" value="Hightech city">Hightech city</option>
+   						    <option class="option" value="Suchitra">Suchitra</option>
+ 						    <option class="option" value="Charminar">Charminar</option>
+						    <option class="option" value="JNTU">JNTU</option>
+ 						    <option class="option" value="Nizampet">Nizampet</option>
+						    <option class="option" value="Secundrabad">Secundrabad</option>
+ 						    <option class="option" value="Patny">Patny</option>
+						    <option class="option" value="Paradise">Paradise</option>
+
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+			
+					<div class="form-left">
+
+						<div class="form-row">
+							<select name="Select Slot">
+							    <option value="None">select slot</option>
+							    <option value="slot1">slot1</option>
+							    <option value="slot2">slot2</option>
+							    <option value="slot3">slot3</option>
+							    <option value="slot4">slot4</option>
+							    <option value="slot5">slot5</option>
+							    <option value="slot6">slot6</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					<div class="form-row-last">
+						<a><input onclick="confirmbook()" type="button" name="Book" class="Book" value="Confirm Booking"></a>
+						<a><input onclick="driverbook()" type="button" name="driver" class="driver" value="Book Driver"></a>
+						
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
